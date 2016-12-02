@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="coffinn.maritjaspers.odisee.be.coffinn.MainActivity"
+   >
+
+    <TextView
+        android:text="Coffinn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="143dp"
+        android:textColor="#FFF"
+        android:textSize="60dp"
+        android:id="@+id/myFont"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/loginNaam"
+        android:layout_alignLeft="@+id/loginNaam"
+        android:layout_alignStart="@+id/loginNaam"
+        android:layout_marginTop="29dp"
+        android:id="@+id/LoginPas"
+        android:textColorHint="#FFF"
+        android:hint="Passwoord" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LoginPas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:id="@+id/aanmelden"
+        android:textColor="#FFF"
+        tools:text="Sign in"
+        android:onClick="sendMessage"
+        />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/aanmelden"
+        android:layout_alignStart="@+id/aanmelden"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/registreer"
+        android:textColor="#FFF"
+        tools:text="Registreer" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/loginNaam"
+        android:textColorHint="#FFF"
+        android:hint="Login"
+
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/myFont"
+        android:layout_alignStart="@+id/myFont" />
+
+</RelativeLayout>

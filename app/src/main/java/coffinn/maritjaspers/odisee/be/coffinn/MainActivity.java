@@ -16,7 +16,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    //ik declareer mijn variabelen
+    //declareer variabelen
     private Button aanmelden1;
     private EditText LoginPas1;
     private EditText loginNaam1;

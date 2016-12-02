@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         LoginPas1 = (EditText) findViewById(R.id.LoginPas);
         loginNaam1 = (EditText) findViewById(R.id.loginNaam);
 
+        //test 1
         //functie schrijven voor knop iets te laten doen
         aanmelden1.setOnClickListener(new View.OnClickListener() {
             @Override

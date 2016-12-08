@@ -29,94 +29,13 @@
             android:id="@+id/myFont"
             android:textColor="#fff"
             android:textSize="60dp"
+            android:paddingTop="5dp"
             />
 
     </RelativeLayout>
 
 
     //Content
-    <RelativeLayout
-        android:id="@+id/scrollablContent"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:addStatesFromChildren="false"
-        android:layout_below="@+id/header"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/footer">
-
-
-        <TextView
-            android:id="@+id/Tekst"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Where do  you want to enjoy?"
-            android:padding="10dp"
-            android:layout_above="@+id/AtCoffinn_Button"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentBottom="false"
-            android:layout_centerInParent="false"
-
-            />
-
-
-
-        <Button
-            android:text="At Coffinn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/AtCoffinn_Button"
-            android:paddingBottom="50dp"
-            android:paddingTop="50dp"
-            style="@style/Widget.AppCompat.Button"
-            android:textAllCaps="false"
-            android:textIsSelectable="false"
-            android:onClick="sendToCoffinn"
-            android:layout_above="@+id/TakeAway_Button"
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/button_border"
-            />
-
-
-
-        <Button
-            android:text="Take Away"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TakeAway_Button"
-            android:paddingBottom="50dp"
-            android:paddingTop="50dp"
-            style="@style/Widget.AppCompat.Button"
-            android:background="@drawable/button_border"
-            android:textAllCaps="false"
-            android:onClick="sendToTakeAway"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="4dp" />
-
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/ac"
-            android:id="@+id/imageView"
-            android:foreground="@+id/AtCoffinn_Button"
-            android:elevation="24dp"
-            android:layout_marginLeft="53dp"
-            android:layout_marginStart="53dp"
-            android:layout_alignTop="@+id/AtCoffinn_Button"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="32dp"
-            />
-    </RelativeLayout>
-
 
     //Footer
 
@@ -139,6 +58,117 @@
             android:textColor="#000"
             android:textSize="20sp"
             />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scrollablContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:addStatesFromChildren="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            android:text="At Coffinn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AtCoffinn_Button"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp"
+            style="@style/Widget.AppCompat.Button"
+            android:textAllCaps="false"
+            android:textIsSelectable="false"
+            android:onClick="sendToCoffinn"
+            android:background="@drawable/button_border"
+            android:layout_below="@+id/Tekst"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:text="Take Away"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TakeAway_Button"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp"
+            style="@style/Widget.AppCompat.Button"
+            android:background="@drawable/button_border"
+            android:textAllCaps="false"
+            android:onClick="sendToTakeAway"
+            android:layout_below="@+id/AtCoffinn_Button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:text="Where do you want to enjoy?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Tekst"
+            android:padding="5dp"
+            android:textColor="#393233"
+            android:layout_marginTop="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/atcoffinn"
+            android:id="@+id/atcoffinn"
+            android:foreground="@+id/AtCoffinn_Button"
+            android:elevation="24dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginStart="48dp"
+            android:layout_below="@+id/Tekst"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="28dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/arrow_down_float"
+            android:padding="15dp"
+            android:id="@+id/btn_pijltje2"
+            android:background="@drawable/test"
+            android:elevation="5dp"
+            android:rotation="-90"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/btn_pijltje1"
+            android:layout_alignStart="@+id/btn_pijltje1" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/takeaway"
+            android:id="@+id/takeaway"
+            android:foreground="@+id/TakeAway_Button"
+            android:elevation="24dp"
+            android:layout_alignTop="@+id/btn_pijltje2"
+            android:layout_alignLeft="@+id/atcoffinn"
+            android:layout_alignStart="@+id/atcoffinn" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/arrow_down_float"
+            android:padding="15dp"
+            android:id="@+id/btn_pijltje1"
+            android:background="@drawable/test"
+            android:elevation="5dp"
+            android:rotation="-90"
+            android:layout_marginRight="19dp"
+            android:layout_marginEnd="19dp"
+            android:layout_alignTop="@+id/atcoffinn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
 
     </RelativeLayout>
 

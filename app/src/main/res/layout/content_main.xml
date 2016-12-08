@@ -36,8 +36,12 @@
         android:layout_alignStart="@+id/loginNaam"
         android:layout_marginTop="29dp"
         android:id="@+id/LoginPas"
-        android:textColorHint="#FFF"
-        android:hint="Password" />
+        android:hint="Password"
+
+        android:backgroundTint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"/>
 
     <Button
         android:text="Button"
@@ -49,7 +53,7 @@
         android:id="@+id/aanmelden"
         android:textColor="#FFF"
         tools:text="Sign in"
-        android:onClick="sendMessage"
+        android:onClick="sendToLocation"
         />
 
     <Button
@@ -70,11 +74,17 @@
         android:inputType="textEmailAddress"
         android:ems="10"
         android:id="@+id/loginNaam"
-        android:textColorHint="#FFF"
         android:hint="Login"
 
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/myFont"
-        android:layout_alignStart="@+id/myFont" />
+        android:layout_alignStart="@+id/myFont"
+
+
+        android:backgroundTint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        />
 
 </RelativeLayout>

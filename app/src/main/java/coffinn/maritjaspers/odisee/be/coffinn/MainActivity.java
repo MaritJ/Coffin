@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         t.setTypeface(myCustomFont);
     }
 
-    public void sendMessage(View view)
+    public void sendToLocation(View view)
     {
         Intent intent = new Intent(this, location.class);
         startActivity(intent);

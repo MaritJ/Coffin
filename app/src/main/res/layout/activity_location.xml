@@ -8,7 +8,6 @@
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.location">
 
 
-
     <include layout="@layout/content_location" />
 
 

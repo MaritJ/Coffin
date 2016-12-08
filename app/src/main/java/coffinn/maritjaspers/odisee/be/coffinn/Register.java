@@ -1,6 +1,7 @@
 package coffinn.maritjaspers.odisee.be.coffinn;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,7 +10,7 @@ import android.widget.EditText;
  * Created by Marit Jaspers on 6/12/2016.
  */
 
-public class Register extends MainActivity {
+public class Register extends AppCompatActivity {
 
     private EditText txtUser1;
     private EditText txtEmail1;

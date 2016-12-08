@@ -65,6 +65,7 @@
         android:layout_alignStart="@+id/aanmelden"
         android:layout_marginBottom="20dp"
         android:id="@+id/registreer"
+        android:onClick=""
         android:textColor="#FFF"
         tools:text="Registreer" />
 

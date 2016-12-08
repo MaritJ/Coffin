@@ -2,4 +2,12 @@
     <string name="app_name">Coffinn</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_location">location</string>
+    <string name="title_activity_order">order</string>
+    <string name="title_activity_aantal">aantal</string>
+    <string name="title_activity_bestelling">Bestelling</string>
+    <string name="title_activity_coffee">coffee</string>
+    <string name="title_activity_cookie">cookie</string>
+    <string name="title_activity_milkshake">milkshake</string>
+    <string name="title_activity_tea">tea</string>
+    <string name="title_activity_verwerking_bestelling">verwerkingBestelling</string>
 </resources>

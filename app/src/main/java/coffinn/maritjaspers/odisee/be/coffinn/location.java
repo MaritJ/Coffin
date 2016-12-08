@@ -1,5 +1,6 @@
 package coffinn.maritjaspers.odisee.be.coffinn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,18 @@ public class location extends AppCompatActivity {
         setContentView(R.layout.activity_location);
 
 
+    }
+
+    public void sendToCoffinn(View view)
+    {
+        Intent intent = new Intent(this, order.class);
+        startActivity(intent);
+    }
+
+    public void sendToTakeAway(View view)
+    {
+        Intent intent = new Intent(this, order.class);
+        startActivity(intent);
     }
 
 }

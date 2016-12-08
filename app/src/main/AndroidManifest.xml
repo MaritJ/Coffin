@@ -21,6 +21,38 @@
         <activity
             android:name=".location"
             android:label="@string/title_activity_location"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".order"
+            android:label="@string/title_activity_order"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".aantal"
+            android:label="@string/title_activity_aantal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Bestelling"
+            android:label="@string/title_activity_bestelling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".coffee"
+            android:label="@string/title_activity_coffee"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cookie"
+            android:label="@string/title_activity_cookie"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".milkshake"
+            android:label="@string/title_activity_milkshake"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tea"
+            android:label="@string/title_activity_tea"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".verwerkingBestelling"
+            android:label="@string/title_activity_verwerking_bestelling"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

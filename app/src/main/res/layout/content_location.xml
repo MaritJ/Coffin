@@ -5,12 +5,142 @@
     android:id="@+id/content_location"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.location"
     tools:showIn="@layout/activity_location">
+
+
+    //Header
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#393233"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="CoffInn"
+            android:id="@+id/myFont"
+            android:textColor="#fff"
+            android:textSize="60dp"
+            />
+
+    </RelativeLayout>
+
+
+    //Content
+    <RelativeLayout
+        android:id="@+id/scrollablContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:addStatesFromChildren="false"
+        android:layout_below="@+id/header"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/footer">
+
+
+        <TextView
+            android:id="@+id/Tekst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Where do  you want to enjoy?"
+            android:padding="10dp"
+            android:layout_above="@+id/AtCoffinn_Button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerInParent="false"
+
+            />
+
+
+
+        <Button
+            android:text="At Coffinn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/AtCoffinn_Button"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp"
+            style="@style/Widget.AppCompat.Button"
+            android:textAllCaps="false"
+            android:textIsSelectable="false"
+            android:onClick="sendToCoffinn"
+            android:layout_above="@+id/TakeAway_Button"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/button_border"
+            />
+
+
+
+        <Button
+            android:text="Take Away"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TakeAway_Button"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp"
+            style="@style/Widget.AppCompat.Button"
+            android:background="@drawable/button_border"
+            android:textAllCaps="false"
+            android:onClick="sendToTakeAway"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="4dp" />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/ac"
+            android:id="@+id/imageView"
+            android:foreground="@+id/AtCoffinn_Button"
+            android:elevation="24dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginStart="53dp"
+            android:layout_alignTop="@+id/AtCoffinn_Button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="32dp"
+            />
+    </RelativeLayout>
+
+
+    //Footer
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorButtonNormal"
+        android:gravity="center"
+        android:animationCache="false"
+        android:animateLayoutChanges="false"
+        android:alwaysDrawnWithCache="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="(c) Coffin 2016"
+            android:textColor="#000"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

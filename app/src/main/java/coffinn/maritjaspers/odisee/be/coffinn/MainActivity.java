@@ -21,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText LoginPas1;
     private EditText loginNaam1;
 
-
-
     TextView t;
 
     @Override

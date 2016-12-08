@@ -44,7 +44,7 @@
         android:textColor="@android:color/white"/>
 
     <Button
-        android:text="Button"
+        android:text="Sign in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/LoginPas"
@@ -57,7 +57,7 @@
         />
 
     <Button
-        android:text="Button"
+        android:text="Registreer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

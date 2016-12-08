@@ -1,5 +1,6 @@
 package coffinn.maritjaspers.odisee.be.coffinn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -31,6 +32,12 @@ public class Register extends AppCompatActivity {
         txtPassword21 = (EditText) findViewById(R.id.txtPassword2);
         btnRegister1 = (Button) findViewById(R.id.btnRegister);
         btnSignin1 = (Button) findViewById(R.id.btnSignin);
+    }
+
+    public void sendToMain(View view)
+    {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 

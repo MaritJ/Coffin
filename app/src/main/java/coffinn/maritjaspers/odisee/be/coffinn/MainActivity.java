@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         loginNaam1 = (EditText) findViewById(R.id.loginNaam);
         registreer1 = (Button) findViewById(R.id.registreer);
 
-        registreer1.setOnClickListener(new View.OnClickListener()
+      /*  registreer1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v){ //als er op register knop wordt geduwd dan naar andere pagina
@@ -38,10 +38,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 MainActivity.this.startActivity(registerIntent);
 
             }
-        });
+        });  */
+
+
 
 
         aanmelden1.setOnClickListener(this); //knop gebruiken
+    }
+
+    public void sendToRegister(View view)
+    {
+        Intent intent = new Intent(this, Register.class);
+        startActivity(intent);
     }
 
     @Override

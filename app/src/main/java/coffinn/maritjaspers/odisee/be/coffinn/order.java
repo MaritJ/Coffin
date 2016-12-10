@@ -27,6 +27,32 @@ public class order extends AppCompatActivity {
         });
     }
 
+    public void sendToCoffee(View view)
+    {
+        Intent intent = new Intent(this, coffee.class);
+        startActivity(intent);
+    }
+
+    public void sendToCookie(View view)
+    {
+        Intent intent = new Intent(this, cookie.class);
+        startActivity(intent);
+    }
+
+    public void sendToMilkshake(View view)
+    {
+        Intent intent = new Intent(this, milkshake.class);
+        startActivity(intent);
+    }
+
+    public void sendToTea(View view)
+    {
+        Intent intent = new Intent(this, tea.class);
+        startActivity(intent);
+    }
+
+
+
 
 
 }

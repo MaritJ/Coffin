@@ -71,10 +71,10 @@
 
 
         <Button
-            android:text="At Coffinn&#10;Enjoy your teste here with us."
+            android:text="At Coffinn&#10;Enjoy your taste here with us."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/AtCoffinn_Button"
+            android:id="@+id/Coffee_Button"
             android:paddingBottom="40dp"
             android:paddingTop="40dp"
             style="@style/Widget.AppCompat.Button"
@@ -87,7 +87,7 @@
             android:layout_alignParentStart="true" />
 
         <Button
-            android:text="Take Away"
+            android:text="Take Away&#10;Enjoy your taste on the road"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/TakeAway_Button"
@@ -97,7 +97,7 @@
             android:background="@drawable/button_border"
             android:textAllCaps="false"
             android:onClick="sendToTakeAway"
-            android:layout_below="@+id/AtCoffinn_Button"
+            android:layout_below="@+id/Coffee_Button"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
@@ -160,7 +160,7 @@
             android:layout_height="50dp"
             app:srcCompat="@drawable/atcoffinn"
             android:id="@+id/atcoffinn"
-            android:foreground="@+id/AtCoffinn_Button"
+            android:foreground="@+id/Coffee_Button"
             android:elevation="24dp"
             android:layout_marginLeft="19dp"
             android:layout_marginStart="19dp"

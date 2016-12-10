@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-        aanmelden1.setOnClickListener(this); //knop gebruiken
+        aanmelden1.setOnClickListener(this); //knop gebruiken;
     }
 
     public void sendToRegister(View view)

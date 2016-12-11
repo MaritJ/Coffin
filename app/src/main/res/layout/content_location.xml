@@ -10,7 +10,7 @@
     tools:showIn="@layout/activity_location">
 
 
-    //Header
+    <!-- Header -->
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
+        <!-- Tekst in header -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +36,7 @@
     </RelativeLayout>
 
 
-    //Footer
+    <!--Footer -->
     <RelativeLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -43,10 +44,9 @@
         android:layout_alignParentBottom="true"
         android:background="?attr/colorButtonNormal"
         android:gravity="center"
-        android:animationCache="false"
-        android:animateLayoutChanges="false"
-        android:alwaysDrawnWithCache="false">
+        >
 
+        <!-- Tekst in footer -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,48 +59,21 @@
     </RelativeLayout>
 
 
-    //Content
-    <RelativeLayout
-        android:id="@+id/scrollablContent"
+    <!-- Content met scroll -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:addStatesFromChildren="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
 
-        <Button
-            android:text="At Coffinn&#10;Enjoy your taste here with us."
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Coffee_Button"
-            android:paddingBottom="40dp"
-            android:paddingTop="40dp"
-            style="@style/Widget.AppCompat.Button"
-            android:textAllCaps="false"
-            android:textIsSelectable="false"
-            android:onClick="sendToCoffinn"
-            android:background="@drawable/button_border"
-            android:layout_below="@+id/Tekst"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <Button
-            android:text="Take Away&#10;Enjoy your taste on the road"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TakeAway_Button"
-            android:paddingBottom="40dp"
-            android:paddingTop="40dp"
-            style="@style/Widget.AppCompat.Button"
-            android:background="@drawable/button_border"
-            android:textAllCaps="false"
-            android:onClick="sendToTakeAway"
-            android:layout_below="@+id/Coffee_Button"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
+        <!-- Tekst in content -->
         <TextView
             android:text="Where do you want to enjoy?"
             android:layout_width="match_parent"
@@ -108,69 +81,122 @@
             android:id="@+id/Tekst"
             android:padding="5dp"
             android:textColor="#393233"
-            android:layout_marginTop="90dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/arrow_down_float"
-            android:padding="15dp"
-            android:id="@+id/btn_pijltje2"
-            android:background="@drawable/test"
-            android:elevation="5dp"
-            android:rotation="-90"
-            android:layout_alignBottom="@+id/TakeAway_Button"
-            android:layout_alignLeft="@+id/btn_pijltje1"
-            android:layout_alignStart="@+id/btn_pijltje1"
-            android:layout_marginBottom="23dp" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/takeaway"
-            android:id="@+id/takeaway"
-            android:foreground="@+id/TakeAway_Button"
-            android:elevation="24dp"
-            android:layout_alignBottom="@+id/btn_pijltje2"
-            android:layout_alignLeft="@+id/atcoffinn"
-            android:layout_alignStart="@+id/atcoffinn" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/arrow_down_float"
-            android:padding="15dp"
-            android:id="@+id/btn_pijltje1"
-            android:background="@drawable/test"
-            android:elevation="5dp"
-            android:rotation="-90"
-            android:layout_marginRight="31dp"
-            android:layout_marginEnd="31dp"
-            android:layout_alignTop="@+id/atcoffinn"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/atcoffinn"
-            android:id="@+id/atcoffinn"
-            android:foreground="@+id/Coffee_Button"
-            android:elevation="24dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginStart="19dp"
-            android:layout_below="@+id/Tekst"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="29dp" />
+            />
 
+        <!-- Elke button moet in een framelayout anders gaan de afbeeldingen er niet in -->
+        <!-- Als je dit niet gebruikt dan is alles onder elkaar -->
+        <!-- Eerste button: at Coffinn -->
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-    </RelativeLayout>
+            <Button
+                android:text="At Coffinn&#10;Enjoy your taste here with us."
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/Coffee_Button"
+                android:paddingBottom="40dp"
+                android:paddingTop="40dp"
+                style="@style/Widget.AppCompat.Button"
+                android:textAllCaps="false"
+                android:textIsSelectable="false"
+                android:onClick="sendToCoffinn"
+                android:background="@drawable/button_border"
+                android:layout_below="@+id/Tekst"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/atcoffinn"
+                android:id="@+id/atcoffinn"
+                android:foreground="@+id/Coffee_Button"
+                android:elevation="24dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_below="@+id/Tekst"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/arrow_down_float"
+                android:padding="15dp"
+                android:id="@+id/btn_pijltje1"
+                android:background="@drawable/test"
+                android:elevation="5dp"
+                android:rotation="-90"
+                android:layout_marginLeft="320dp"
+                android:layout_marginStart="320dp"
+                android:layout_marginTop="30dp"
+                android:layout_alignTop="@+id/atcoffinn"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </FrameLayout>
+
+        <!-- Tweede button: take away -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/takeaway"
+                android:id="@+id/takeaway"
+                android:foreground="@+id/TakeAway_Button"
+                android:elevation="24dp"
+                android:layout_alignBottom="@+id/btn_pijltje2"
+                android:layout_alignLeft="@+id/atcoffinn"
+                android:layout_alignStart="@+id/atcoffinn"
+                android:layout_marginLeft="19dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="30dp"
+                />
+
+            <Button
+                android:text="Take Away&#10;Enjoy your taste on the road"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TakeAway_Button"
+                android:paddingBottom="40dp"
+                android:paddingTop="40dp"
+                style="@style/Widget.AppCompat.Button"
+                android:background="@drawable/button_border"
+                android:textAllCaps="false"
+                android:onClick="sendToTakeAway"
+                android:layout_below="@+id/Coffee_Button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/arrow_down_float"
+                android:padding="15dp"
+                android:id="@+id/btn_pijltje2"
+                android:background="@drawable/test"
+                android:elevation="5dp"
+                android:rotation="-90"
+                android:layout_alignBottom="@+id/TakeAway_Button"
+                android:layout_alignLeft="@+id/btn_pijltje1"
+                android:layout_alignStart="@+id/btn_pijltje1"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="-30dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>

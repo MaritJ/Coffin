@@ -8,8 +8,7 @@
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.location">
 
 
-    <include layout="@layout/content_location"
-        android:layout_height="481dp" />
+    <include layout="@layout/content_location" />
 
 
 </android.support.design.widget.CoordinatorLayout>

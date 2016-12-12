@@ -33,11 +33,7 @@
 
     </RelativeLayout>
 
-
-    //Content
-
     //Footer
-
     <RelativeLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
@@ -60,15 +56,36 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/scrollablContent"
+    <!-- Content met scroll -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:addStatesFromChildren="false"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+    <TextView
+        android:text="What would you like to order?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Tekst"
+        android:padding="5dp"
+        android:textColor="#393233"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/header">
+        android:layout_alignParentStart="true" />
 
+    <!-- Elke button moet in een framelayout anders gaan de afbeeldingen er niet in -->
+    <!-- Als je dit niet gebruikt dan is alles onder elkaar -->
+    <!-- Eerste button: Coffee -->
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
 
         <Button
             android:text="Coffee"
@@ -94,12 +111,13 @@
             android:id="@+id/coffee"
             android:foreground="@+id/Coffee_Button"
             android:elevation="24dp"
-            android:layout_marginLeft="48dp"
-            android:layout_marginStart="48dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="30dp"
             android:layout_below="@+id/Tekst"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="28dp" />
+             />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -111,11 +129,20 @@
             android:background="@drawable/test"
             android:elevation="5dp"
             android:rotation="-90"
-            android:layout_marginRight="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
             android:layout_alignTop="@+id/coffee"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
+
+
+    </FrameLayout>
+
+    <!-- Tweede button: Cookie -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:text="Cookie"
@@ -141,7 +168,10 @@
             android:elevation="24dp"
             android:layout_alignBottom="@+id/btn_pijltje2"
             android:layout_alignLeft="@+id/coffee"
-            android:layout_alignStart="@+id/coffee" />
+            android:layout_alignStart="@+id/coffee"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="30dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -153,10 +183,22 @@
             android:background="@drawable/test"
             android:elevation="5dp"
             android:rotation="-90"
-            android:layout_marginBottom="25dp"
             android:layout_above="@+id/Milkshake_Button"
             android:layout_alignLeft="@+id/btn_pijltje1"
-            android:layout_alignStart="@+id/btn_pijltje1" />
+            android:layout_alignStart="@+id/btn_pijltje1"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            />
+
+    </FrameLayout>
+
+    <!-- Derde button: Milkshake -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
 
         <Button
             android:text="Milkshake"
@@ -183,7 +225,9 @@
             android:layout_below="@+id/Cookie_Button"
             android:layout_alignLeft="@+id/cookie"
             android:layout_alignStart="@+id/cookie"
-            android:layout_marginTop="22dp" />
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="30dp"/>
 
         <ImageView
             android:layout_width="wrap_content"
@@ -197,8 +241,17 @@
             android:rotation="-90"
             android:layout_alignTop="@+id/milkshake"
             android:layout_alignLeft="@+id/btn_pijltje2"
-            android:layout_alignStart="@+id/btn_pijltje2" />
+            android:layout_alignStart="@+id/btn_pijltje2"
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"/>
 
+    </FrameLayout>
+
+    <!-- Vierde button: Tea -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Button
             android:text="Tea"
@@ -228,7 +281,9 @@
             android:layout_alignBottom="@+id/Tea_Button"
             android:layout_alignLeft="@+id/btn_pijltje3"
             android:layout_alignStart="@+id/btn_pijltje3"
-            android:layout_marginBottom="24dp" />
+            android:layout_gravity="right"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp" />
 
         <ImageView
             android:layout_width="50dp"
@@ -239,20 +294,14 @@
             android:elevation="24dp"
             android:layout_alignBottom="@+id/btn_pijltje4"
             android:layout_alignLeft="@+id/milkshake"
-            android:layout_alignStart="@+id/milkshake" />
+            android:layout_alignStart="@+id/milkshake"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="30dp"
+            />
 
-        <TextView
-            android:text="Where do you want to enjoy?"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Tekst"
-            android:padding="5dp"
-            android:textColor="#393233"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-
-    </RelativeLayout>
+    </FrameLayout>
+    </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

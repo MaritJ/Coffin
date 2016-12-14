@@ -97,7 +97,7 @@
                     android:textIsSelectable="false"
                     android:background="@drawable/button_border"
                     android:layout_below="@+id/Tekst"
-                    android:onClick="sendToAantalCappuccino"
+                    android:onClick="sendToAantalMBanana"
                     />
 
                 <ImageView
@@ -145,7 +145,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalDark"
+                    android:onClick="sendToAantalMCherry"
                     android:layout_below="@+id/Mbana_Button"
                   />
 
@@ -193,7 +193,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalDark"
+                    android:onClick="sendToAantalMChoco"
                     android:layout_below="@+id/Mcherry_Button"
                     />
 
@@ -265,7 +265,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalLatte"
+                    android:onClick="sendToAantalMCoconut"
                     android:layout_below="@+id/Mchoco_Button"
                     />
 
@@ -288,7 +288,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalLatte"
+                    android:onClick="sendToAantalMKiwi"
                     android:layout_below="@+id/Mcoconut_Button"
                     />
 
@@ -336,7 +336,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalLatte"
+                    android:onClick="sendToAantalMStrawberry"
                     android:layout_below="@+id/Mkiwi_Button"
                     />
 
@@ -384,7 +384,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalLatte"
+                    android:onClick="sendToAantalMVanilla"
                     android:layout_below="@+id/Mstrawberry_Button"
                     />
 

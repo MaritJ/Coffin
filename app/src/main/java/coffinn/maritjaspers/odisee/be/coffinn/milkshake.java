@@ -1,5 +1,6 @@
 package coffinn.maritjaspers.odisee.be.coffinn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,6 +25,48 @@ public class milkshake extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void sendToAantalMBanana(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalMCherry(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalMChoco(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalMCoconut(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalMKiwi(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalMStrawberry(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalMVanilla(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
     }
 
 }

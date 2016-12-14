@@ -5,12 +5,93 @@
     android:id="@+id/content_aantal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.aantal"
     tools:showIn="@layout/activity_aantal">
 
+    //Header
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#393233"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="CoffInn"
+            android:id="@+id/myFont"
+            android:textColor="#fff"
+            android:textSize="60dp"
+            android:paddingTop="5dp"
+            />
+
+    </RelativeLayout>
+
+    //Footer
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorButtonNormal"
+        android:gravity="center"
+        android:animationCache="false"
+        android:animateLayoutChanges="false"
+        android:alwaysDrawnWithCache="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="(c) Coffin 2016"
+            android:textColor="#000"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+    <!-- Content met scroll -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+            android:text="How many ... do you like?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Tekst"
+            android:padding="5dp"
+            android:textColor="#393233"
+            />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/aantal"
+                android:hint="Geef hierin hoeveel je er wilt"
+                />
+
+            <Button
+                android:text="Submit Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/submit" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

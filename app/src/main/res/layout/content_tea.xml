@@ -97,7 +97,7 @@
                     android:textIsSelectable="false"
                     android:background="@drawable/button_border"
                     android:layout_below="@+id/Tekst"
-                    android:onClick="sendToAantalCappuccino"
+                    android:onClick="sendToAantalGreenTea"
                     />
 
                 <ImageView
@@ -145,7 +145,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalDark"
+                    android:onClick="sendToAantalHoneyTea"
                     android:layout_below="@+id/Tgreen_Button"
                     />
 
@@ -193,7 +193,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalDark"
+                    android:onClick="sendToAantalLemonTea"
                     android:layout_below="@+id/Thoney_Button"
                     />
 
@@ -239,7 +239,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalLatte"
+                    android:onClick="sendToAantalMintTea"
                     android:layout_below="@+id/Tlemon_Button"
                     />
 
@@ -288,7 +288,7 @@
                     style="@style/Widget.AppCompat.Button"
                     android:background="@drawable/button_border"
                     android:textAllCaps="false"
-                    android:onClick="sendToAantalLatte"
+                    android:onClick="sendToAantalRosehipTea"
                     android:layout_below="@+id/Tmint_Button"
                     />
 

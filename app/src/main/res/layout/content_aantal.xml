@@ -91,7 +91,9 @@
                 android:text="Submit Item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/submit" />
+                android:id="@+id/submit"
+                android:onClick="sendToBestelling"
+                />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

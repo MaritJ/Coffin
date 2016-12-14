@@ -5,12 +5,418 @@
     android:id="@+id/content_milkshake"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.milkshake"
     tools:showIn="@layout/activity_milkshake">
+
+    //Header
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#393233"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="CoffInn"
+            android:id="@+id/myFont"
+            android:textColor="#fff"
+            android:textSize="60dp"
+            android:paddingTop="5dp"
+            />
+
+    </RelativeLayout>
+
+    //Footer
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorButtonNormal"
+        android:gravity="center"
+        android:animationCache="false"
+        android:animateLayoutChanges="false"
+        android:alwaysDrawnWithCache="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="(c) Coffin 2016"
+            android:textColor="#000"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+    <!-- Content met scroll -->
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+            <TextView
+                android:text="Which milkshake do you like?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Tekst"
+                android:padding="5dp"
+                android:textColor="#393233"
+                 />
+
+            <!-- Elke button moet in een framelayout anders gaan de afbeeldingen er niet in -->
+            <!-- Als je dit niet gebruikt dan is alles onder elkaar -->
+            <!-- Eerste button: Banana Milkshake  -->
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <Button
+                    android:text="Banana Milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mbana_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:textAllCaps="false"
+                    android:textIsSelectable="false"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@+id/Tekst"
+                    android:onClick="sendToAantalCappuccino"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/mbanana"
+                    android:id="@+id/banana"
+                    android:foreground="@+id/Mbana_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje1"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                     />
+
+
+            </FrameLayout>
+
+            <!-- Tweede button: Cherry milkshake -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="Cherry milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mcherry_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalDark"
+                    android:layout_below="@+id/Mbana_Button"
+                  />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/mkers"
+                    android:id="@+id/mcherry"
+                    android:foreground="@+id/Mcherry_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje2"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"
+                    />
+
+            </FrameLayout>
+
+            <!-- Derde button: Choco Milkshake -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <Button
+                    android:text="Choco milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mchoco_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalDark"
+                    android:layout_below="@+id/Mcherry_Button"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/mchoco"
+                    android:id="@+id/mchoco"
+                    android:foreground="@+id/Mchoco_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje3"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </FrameLayout>
+
+            <!-- vierde button: Coconut Milkshake -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/mcoconut"
+                    android:id="@+id/mcoconut"
+                    android:foreground="@+id/Mcoconut_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje4"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+                <Button
+                    android:text="Coconut Milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mcoconut_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalLatte"
+                    android:layout_below="@+id/Mchoco_Button"
+                    />
+
+            </FrameLayout>
+
+            <!-- vijfde button: Kiwi Milkshake -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <Button
+                    android:text="Kiwi Milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mkiwi_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalLatte"
+                    android:layout_below="@+id/Mcoconut_Button"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/mkiwi"
+                    android:id="@+id/mkiwi"
+                    android:foreground="@+id/Mkiwi_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje5"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </FrameLayout>
+
+            <!-- zesde button: Strawberry Milkshake -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <Button
+                    android:text="Strawberry Milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mstrawberry_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalLatte"
+                    android:layout_below="@+id/Mkiwi_Button"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/maardbei"
+                    android:id="@+id/mstrawberry"
+                    android:foreground="@+id/Mstrawberry_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje6"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </FrameLayout>
+
+            <!-- zevende button: Vanilla Milkshake -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <Button
+                    android:text="Vanilla Milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Mvanilla_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalLatte"
+                    android:layout_below="@+id/Mstrawberry_Button"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/mvanille"
+                    android:id="@+id/mvanilla"
+                    android:foreground="@+id/Mvanilla_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje7"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

@@ -10,4 +10,5 @@
     <string name="title_activity_milkshake">milkshake</string>
     <string name="title_activity_tea">tea</string>
     <string name="title_activity_verwerking_bestelling">verwerkingBestelling</string>
+    <string name="title_activity_registeren">Registeren</string>
 </resources>

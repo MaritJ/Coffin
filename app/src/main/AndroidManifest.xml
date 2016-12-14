@@ -53,6 +53,10 @@
         <activity
             android:name=".verwerkingBestelling"
             android:label="@string/title_activity_verwerking_bestelling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Registeren"
+            android:label="@string/title_activity_registeren"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

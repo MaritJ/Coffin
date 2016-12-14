@@ -1,36 +1,54 @@
 package coffinn.maritjaspers.odisee.be.coffinn;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 /**
  * Created by Marit Jaspers on 6/12/2016.
  */
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+//implements View.OnClickListener
 
+public class MainActivity extends AppCompatActivity {
+
+
+    /*
+    TextView t;
+    EditText PW;
+    */
+    /*
     private Button aanmelden1;
     private EditText LoginPas1;
     private EditText loginNaam1;
     private Button  registreer1;
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
+        t = (TextView) findViewById(R.id.myFont);
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(), "font/myFont.otf");
+        t.setTypeface(myCustomFont);
+        */
+
+        /*
         //linken met knoppen
         aanmelden1 = (Button) findViewById(R.id.aanmelden);
         LoginPas1 = (EditText) findViewById(R.id.LoginPas);
         loginNaam1 = (EditText) findViewById(R.id.loginNaam);
         registreer1 = (Button) findViewById(R.id.registreer);
 
-      /*  registreer1.setOnClickListener(new View.OnClickListener()
+       registreer1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v){ //als er op register knop wordt geduwd dan naar andere pagina
@@ -38,20 +56,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 MainActivity.this.startActivity(registerIntent);
 
             }
-        });  */
-
-
-
+        });
 
         aanmelden1.setOnClickListener(this); //knop gebruiken;
+        */
     }
+
 
     public void sendToRegister(View view)
     {
-        Intent intent = new Intent(this, Register.class);
+        Intent intent = new Intent(this, Registeren.class);
         startActivity(intent);
     }
 
+    public void sendToLocation(View view)
+    {
+        Intent intent = new Intent(this, location.class);
+        startActivity(intent);
+    }
+
+
+
+    /*
     @Override
 
     public void onClick(View v) {
@@ -64,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+    */
 }
         //test 1
         //functie schrijven voor knop iets te laten doen

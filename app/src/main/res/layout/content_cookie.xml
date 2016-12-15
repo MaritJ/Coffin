@@ -190,8 +190,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-
-
                 <Button
                     android:text="Muffin"
                     android:layout_width="match_parent"
@@ -223,6 +221,96 @@
                     android:src="@android:drawable/arrow_down_float"
                     android:padding="15dp"
                     android:id="@+id/btn_pijltje3"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </FrameLayout>
+
+            <!-- Vierde button: New Yorker -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="New Yorker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/York_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalYork"
+                    android:layout_below="@+id/Muffin_Button" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/cookie"
+                    android:id="@+id/york"
+                    android:foreground="@+id/York_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje4"
+                    android:background="@drawable/test"
+                    android:elevation="5dp"
+                    android:rotation="-90"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="30dp"/>
+
+            </FrameLayout>
+
+            <!-- Vijfde button: Pie -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="Pie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Pie_Button"
+                    android:paddingBottom="40dp"
+                    android:paddingTop="40dp"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@drawable/button_border"
+                    android:textAllCaps="false"
+                    android:onClick="sendToAantalPie"
+                    android:layout_below="@+id/York_Button" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/pie"
+                    android:id="@+id/pie"
+                    android:foreground="@+id/Pie_Button"
+                    android:elevation="4dp"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="30dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:padding="15dp"
+                    android:id="@+id/btn_pijltje5"
                     android:background="@drawable/test"
                     android:elevation="5dp"
                     android:rotation="-90"

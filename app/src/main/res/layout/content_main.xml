@@ -14,18 +14,6 @@
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.MainActivity"
    >
 
-    <TextView
-        android:text="Coffinn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="143dp"
-        android:textColor="#FFF"
-        android:textSize="60dp"
-        android:id="@+id/myFont"
-        />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,32 +31,6 @@
         android:textColorHint="@android:color/white"
         android:textColor="@android:color/white"/>
 
-    <Button
-        android:text="Sign in"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/LoginPas"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:id="@+id/aanmelden"
-        android:textColor="#FFF"
-        tools:text="Sign in"
-        android:onClick="sendToLocation"
-        />
-
-    <Button
-        android:text="Registreer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/aanmelden"
-        android:layout_alignStart="@+id/aanmelden"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/registreer"
-        android:onClick="sendToRegister"
-        android:textColor="#FFF"
-        tools:text="Registreer" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,25 +39,54 @@
         android:id="@+id/loginNaam"
         android:hint="Login"
 
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/myFont"
-        android:layout_alignStart="@+id/myFont"
-
 
         android:backgroundTint="@android:color/white"
         android:textCursorDrawable="@android:color/white"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
-        />
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/myFont"
+        android:layout_alignEnd="@+id/myFont" />
 
     <Button
-        android:text="Button"
+        android:text="Sign in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:onClick="sendToLocation"/>
+        android:id="@+id/aanmelden"
+        android:textColor="#FFF"
+        tools:text="Sign in"
+        android:onClick="sendToLocation"
+        android:layout_below="@+id/LoginPas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/roundedbutton"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+
+        />
+
+    <TextView
+        android:text="Coffinn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textSize="70dp"
+        android:id="@+id/myFont"
+        android:layout_above="@+id/loginNaam"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="53dp" />
+
+    <Button
+        android:text="Register now!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registreer"
+        android:onClick="sendToRegister"
+        android:textColor="#FFF"
+        android:layout_marginTop="27dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/aanmelden"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"/>
 
 </RelativeLayout>

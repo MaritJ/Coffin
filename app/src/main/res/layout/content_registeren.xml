@@ -7,63 +7,105 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="coffinn.maritjaspers.odisee.be.coffinn.Registeren"
-    tools:showIn="@layout/activity_registeren">
+    tools:showIn="@layout/activity_registeren"
+    android:background="@drawable/bg"
+    >
 
-    <EditText
-        android:layout_width="match_parent"
+    <Button
+        android:text="Sign in!"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/txtUser"
+        android:id="@+id/btnSignin"
+        android:onClick="sendToMain"
         android:layout_weight="0.10"
-        android:hint="Full name" />
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:textAllCaps="false"/>
 
-    <EditText
-        android:layout_width="match_parent"
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/txtEmail"
+        android:id="@+id/btnRegister"
         android:layout_weight="0.10"
-        android:hint="E-mail"
-        android:layout_below="@+id/txtUser"/>
+        android:background="@drawable/roundedbutton"
+        android:textColor="@android:color/white"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_above="@+id/btnSignin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp"
+        android:textAllCaps="false"/>
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/txtPassword1"
         android:layout_weight="0.09"
-        android:hint="Password"
-        android:layout_below="@+id/txtEmail"/>
+        android:hint="PASSWORD"
+        android:backgroundTint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtEmail"
+        android:layout_alignStart="@+id/txtEmail" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtUser"
+        android:layout_weight="0.10"
+        android:hint="FULL NAME"
+        android:backgroundTint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/txtEmail"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txtEmail"
+        android:layout_weight="0.10"
+        android:hint="E-MAIL"
+        android:backgroundTint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/txtPassword1"
+        android:layout_alignLeft="@+id/txtUser"
+        android:layout_alignStart="@+id/txtUser" />
+
+    <EditText
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:id="@+id/txtPassword2"
         android:layout_weight="0.10"
-        android:hint="Password"
-        android:layout_below="@+id/txtPassword1"/>
-
-    <Button
-        android:text="Register"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRegister"
-        android:layout_weight="0.10"
-        android:layout_below="@+id/txtPassword2"/>
-
-    <Button
-        android:text="Sign in!"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnSignin"
-        android:onClick="sendToMain"
-        android:layout_weight="0.10"
-        android:layout_below="@+id/btnRegister"/>
+        android:hint="PASSWORD"
+        android:backgroundTint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/txtPassword1"
+        android:layout_alignLeft="@+id/txtPassword1"
+        android:layout_alignStart="@+id/txtPassword1"
+        android:paddingBottom="5dp"
+        />
 
 
 </RelativeLayout>

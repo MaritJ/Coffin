@@ -45,4 +45,16 @@ public class cookie extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void sendToAantalYork(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
+    public void sendToAantalPie(View view)
+    {
+        Intent intent = new Intent(this, aantal.class);
+        startActivity(intent);
+    }
+
 }

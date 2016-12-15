@@ -19,9 +19,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
 
-    /*
+
     TextView t;
-    EditText PW;
+   /* EditText PW;
     */
     /*
     private Button aanmelden1;
@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /*
+
         t = (TextView) findViewById(R.id.myFont);
-        Typeface myCustomFont=Typeface.createFromAsset(getAssets(), "font/myFont.otf");
+        Typeface myCustomFont=Typeface.createFromAsset(getAssets(), "fonts/myFont.otf");
         t.setTypeface(myCustomFont);
-        */
+
 
         /*
         //linken met knoppen

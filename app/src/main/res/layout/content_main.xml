@@ -55,7 +55,7 @@
         android:id="@+id/aanmelden"
         android:textColor="#FFF"
         tools:text="Sign in"
-        android:onClick="sendToLocation"
+        android:onClick="send"
         android:layout_below="@+id/LoginPas"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"

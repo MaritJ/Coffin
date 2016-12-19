@@ -5,10 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="coffinn.maritjaspers.odisee.be.coffinn.location">
-
+    tools:context="coffinn.maritjaspers.odisee.be.coffinn.Location">
 
     <include layout="@layout/content_location" />
-
 
 </android.support.design.widget.CoordinatorLayout>

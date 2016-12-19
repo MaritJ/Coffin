@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         aanmelden1.setOnClickListener(this); //knop gebruiken;
         */
+
+
     }
 
 
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendToLocation(View view)
     {
-        Intent intent = new Intent(this, location.class);
+        Intent intent = new Intent(this, Location.class);
         startActivity(intent);
     }
 
@@ -92,31 +94,34 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 }
-        //test 1
-        //functie schrijven voor knop iets te laten doen
-        //aanmelden1.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Integer errors = 0; //geen fouten
-        //       if (!loginNaam1.getText().toString().contains("@") || !loginNaam1.getText().toString().contains(".")) //moet een @bevatten en een .
-        //        {
-        //            errors++ ; //errors = 1 --> dus fout --> dus melding
-        //            loginNaam1.setError("Gelieve een geldig email adres op te geven");
-        //        }
+//test 1
+//functie schrijven voor knop iets te laten doen
+//aanmelden1.setOnClickListener(new View.OnClickListener() {
+//    @Override
+//    public void onClick(View view) {
+//        Integer errors = 0; //geen fouten
+//       if (!loginNaam1.getText().toString().contains("@") || !loginNaam1.getText().toString().contains(".")) //moet een @bevatten en een .
+//        {
+//            errors++ ; //errors = 1 --> dus fout --> dus melding
+//            loginNaam1.setError("Gelieve een geldig email adres op te geven");
+//        }
 
-        //    }
-        //});
+//    }
+//});
 
-        //t = (TextView) findViewById(R.id.myFont);
-        //Typeface myCustomFont=Typeface.createFromAsset(getAssets(), "fonts/myFont.otf");
-        //t.setTypeface(myCustomFont);
-    //}
+//t = (TextView) findViewById(R.id.myFont);
+//Typeface myCustomFont=Typeface.createFromAsset(getAssets(), "fonts/myFont.otf");
+//t.setTypeface(myCustomFont);
+//}
 
-    //public void sendToLocation(View view)
-    //{
-    //    Intent intent = new Intent(this, location.class);
-    //    startActivity(intent);
-    //}
+//public void sendToLocation(View view)
+//{
+//    Intent intent = new Intent(this, Location.class);
+//    startActivity(intent);
+//}
+
+
+
 
 
 
